@@ -17,6 +17,7 @@ const Home = () => {
 
   if (fetching) return <p>Loading...</p>;
   if (error) return <p>Oh no... {error.message}</p>;
+  if (!data || !data.pokemons || !data.pokemons.length) return <p>No data</p>;
 
   return (
     <ul>
